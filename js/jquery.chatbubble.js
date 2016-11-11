@@ -13,9 +13,7 @@
 
     function Plugin( element, options ) {
         this.element = element;
-
         this.options = $.extend( {}, defaults, options) ;
-
         this._defaults = defaults;
         this._name = chatBubble;
 

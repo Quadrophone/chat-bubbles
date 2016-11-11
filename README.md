@@ -14,7 +14,7 @@ Create an array of message strings. Call the .chatBubble method on an unordered 
 <ul id="messages"></ul>
 
 <script>
-var messages = ['Hi, this is my first message', 'Hello, this is my second message', 'Are you there?', 'Hello?']
+var messages = ['Hi, this is my first message', 'Hello, this is my second message', 'Message message message']
 
 $('#messages').chatBubble({
     messages: messages,
@@ -23,6 +23,10 @@ $('#messages').chatBubble({
 });
 </script>
 ```
+
+## Demo:
+[Here](https://quadrophone.github.io/chat-bubbles/)
+
 
 
 
