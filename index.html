@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Message</title>
+    <link rel="stylesheet" href="css/textmessage.css" type="text/css">
+</head>
+<body>
+    <h1>Text Message</h1>
+
+    <div id="messages"><ul class="tm__list"></ul>
+    <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+
+    <script src="js/textmessage.js"></script>
+
+    <script>
+    var messages = ['Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa', 'ok', 'thx','bai'];
+   
+    $('#messages').textMessage({
+        messages: messages,
+    });
+
+    </script>
+</body>
+</html>
