@@ -5,7 +5,7 @@
 ;(function ( $, window, document, undefined ) {
 
 
-    var textMessage = "textMessage",
+    var chatBubble = "chatBubble",
        
         defaults = {
             typingSpeed: 40 // words per minute
@@ -17,7 +17,7 @@
         this.options = $.extend( {}, defaults, options) ;
 
         this._defaults = defaults;
-        this._name = textMessage;
+        this._name = chatBubble;
 
         this.init();
     }
@@ -27,7 +27,7 @@
         init: function() {
             var self = this;
 
-            $(self.element).addClass('tm__list');
+            $(self.element).addClass('cb__list');
            
             var messages = this.options.messages;
             var count = messages.length;
@@ -43,7 +43,6 @@
             }
 
             addMessage();
-
         },
 
         addMessage: function(el, message, typingSpeed) {
@@ -69,12 +68,10 @@
         }
     };
 
-    // A really lightweight plugin wrapper around the constructor,
-    // preventing against multiple instantiations
-    $.fn[textMessage] = function ( options ) {
+    $.fn[chatBubble] = function ( options ) {
         return this.each(function () {
-            if (!$.data(this, "plugin_" + textMessage)) {
-                $.data(this, "plugin_" + textMessage,
+            if (!$.data(this, "plugin_" + chatBubble)) {
+                $.data(this, "plugin_" + chatBubble,
                 new Plugin( this, options ));
             }
         });

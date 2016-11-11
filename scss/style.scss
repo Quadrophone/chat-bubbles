@@ -1,5 +1,5 @@
 
-.tm__list {
+.cb__list {
   padding: 0;
   list-style-type: none;
   font-family: sans-serif;
@@ -22,13 +22,13 @@
     min-width: 44px;
     min-height: 12px;
     &.typing {
-          animation: font-fade 1.2s ease-in-out infinite;
+          animation: cb-font-fade 1.2s ease-in-out infinite;
 
     }
   }
 }
 
-@keyframes font-fade {
+@keyframes cb-font-fade {
   50% {
     color: transparent;
   }

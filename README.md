@@ -1,2 +1,7 @@
-# chat-bubbles
-Chat bubble jQuery plugin
+# Chat Bubbles
+
+## Requirements: jQuery
+
+## Usage:
+
+
