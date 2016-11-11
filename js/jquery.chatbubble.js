@@ -4,11 +4,11 @@
 
 ;(function ( $, window, document, undefined ) {
 
-
     var chatBubble = "chatBubble",
-       
+
         defaults = {
-            typingSpeed: 40 // words per minute
+            typingSpeed: 40, // speed in words per minute
+            delay: 1000 // delay between adding messages
         };
 
     function Plugin( element, options ) {
@@ -32,13 +32,16 @@
             var messages = this.options.messages;
             var count = messages.length;
             var typingSpeed = this.options.typingSpeed || this.defaults.typingSpeed;
+            var delay = this.options.delay || this.defaults.delay;
 
             var i = 0;
 
             function addMessage() {
                 self.addMessage(self.element, messages[i], typingSpeed).then(function() {
-                i++;
-                if (i < count) addMessage();
+                    window.setTimeout(function() {
+                        i++;
+                        if (i < count) addMessage();
+                    },delay);
                 });
             }
 
@@ -50,8 +53,8 @@
             var $listItem = $('<li></li>');
             var $bubble = $('<div class="bubble typing">...</div>');
             var words = message.split(' ').length; 
-
             var speed = (words / typingSpeed) * 6000;
+
             if (speed < 1000) speed = 1000;
             if (speed > 10000) speed = 10000;
 
