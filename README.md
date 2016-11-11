@@ -19,7 +19,7 @@ var messages = ['Hi, this is my first message', 'Hello, this is my second messag
 $('#messages').chatBubble({
     messages: messages,
     typingSpeed: 40, // optional, "typing" speed in words per minute. Default: 40
-    delay: 1000 // optional, delay before add the next message, in ms. Default: 1000
+    delay: 1000 // optional, delay before adding the next message, in ms. Default: 1000
 });
 </script>
 ```
